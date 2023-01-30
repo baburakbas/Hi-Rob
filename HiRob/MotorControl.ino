@@ -17,30 +17,29 @@ pinMode(in3, OUTPUT);
 pinMode(in4,OUTPUT);
   pinMode(enA,OUTPUT);
   pinMode(enB,OUTPUT);
-  
-  char komutlar[] = {
+  char komutlar[] = {'f','b','r','l'};
+ 
 
-  f,b,r,l
-}; 
 }
 
 void loop(){
+char komutlar[] = {'f','b','r','l'};
+
   
-delay(2000);
 
   for (int i = 0; i < 4; i++) {
-    if komutlar[i] == f{
+    if (komutlar[i] == 'f'){
   f();
     };
-      if komutlar[i] == b{
-  b()
-    }
-      if komutlar[i] == r{
-  r()
-    }
-      if komutlar[i] == l{
-  l()
-    }
+      if( komutlar[i] == 'b'){
+  b();
+    };
+      if (komutlar[i] == 'r'){
+  r();
+    };
+      if (komutlar[i] == 'l'){
+  l();
+    };
   }
 }
 
@@ -64,7 +63,7 @@ digitalWrite(in4,HIGH);
 digitalWrite(in1, LOW);
 digitalWrite(in2,HIGH);
 delay(2000);
-delay(2000);
+
 }
 void r (){
   analogWrite(enA,100);
